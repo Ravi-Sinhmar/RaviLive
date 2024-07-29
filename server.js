@@ -9,8 +9,8 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(express.static(path.join(__dirname, "public")));
-app.set("views", path.join(__dirname, "views")); // Set views directory
 app.set("view engine", "ejs"); // Set view engine to EJS
+app.set("views", path.join(__dirname, "views")); // Set views directory
 
 //  app.get('/', (req, res) => {
 //   console.log("get");
@@ -18,7 +18,7 @@ app.set("view engine", "ejs"); // Set view engine to EJS
 // });
 app.get("/", (req, res) => {
   res.render("Index", {
-    about: "show",
+    about: "no",
     skills: "hidden",
     winnings: "hidden",
     hire: "hidden",
@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
 });
 app.get("/about", (req, res) => {
   res.render("Index", {
-    about: "show",
+    about: "no",
     skills: "hidden",
     winnings: "hidden",
     hire: "hidden",
@@ -48,7 +48,7 @@ app.get("/about", (req, res) => {
 app.get("/skills", (req, res) => {
   res.render("Index", {
     about: "hidden",
-    skills: "show",
+    skills: "no",
     winnings: "hidden",
     hire: "hidden",
     tw: "62px",
@@ -63,7 +63,7 @@ app.get("/winnings", (req, res) => {
   res.render("Index", {
     about: "hidden",
     skills: "hidden",
-    winnings: "show",
+    winnings: "no",
     hire: "hidden",
     tw: "117px",
     iw: "74px",
@@ -78,7 +78,7 @@ app.get("/hire", (req, res) => {
     about: "hidden",
     skills: "hidden",
     winnings: "hidden",
-    hire: "show",
+    hire: "no",
     tw: "198px",
     iw: "42px",
     hr:'text-white',

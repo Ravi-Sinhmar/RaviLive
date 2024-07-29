@@ -36,7 +36,6 @@ navButtons.forEach(button => {
     document.querySelectorAll('section').forEach(section =>{
       section.classList.add('hidden');
       contentElement.classList.remove('hidden');
-
       const finalUrl = `/${newUrl}`;
 history.pushState({}, null, finalUrl);
       
