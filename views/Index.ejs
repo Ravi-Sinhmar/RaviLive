@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="output.css">
+  <title>Home Page</title>
+  <style>
+     *{
+          box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            direction: none;
+            outline: none;
+            text-decoration: none;
+        }
+:root {
+      --travel-width: <%=tw%>;
+      --item-width: <%=iw%>;
+    } 
+    #navbg {
+    width: var(--item-width);
+    left: var(--travel-width);
+     transition-property:all;
+     transition-duration: 0.4s;
+     transition-timing-function: ease;
+     transition-delay: 0;
+    }
+    .active{
+      color: white;
+    }
+    #navbg.active{
+      width: var(--item-width);
+     left: var(--travel-width);
+    }
+
+    .bgImg{
+      background-image: url("img/cgcLandran.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  
+    .scrollContainer::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Webkit browsers */
+}
+.scrollContainer{
+  scrollbar-width: none;
+  transition: scroll-behavior 0.7s;
+ transition-timing-function: ease-in-out;
+}
+
+  </style>
+</head>
+<body>
+  <main class="min-h-full max-w-full xl:px-72 lg:px-48  md:px-40 sm:px-10 px-4 py-8 ">
+    <header id="topIntro" class="">
+      <img class="w-16 h-16   rounded-full" src="img/profile.jpg" alt="Profile Image">
+      <h1 class="font-medium text-xl text-gray-900 mt-2">Ravi Sinhmar</h1>
+      <h3 class="text-gray-500 text-sm">Engineer & Software Developer</h3>
+      <div class="flex gap-3 items-center mt-7">
+        <a href="https://x.com/BloodyFounder">
+          <img class="w-6 h-5" src="img/xlight.png" alt="">
+        </a>
+        <a href="https://github.com/Ravi-Sinhmar">
+          <img class="w-6 h-6 rounded-full" src="img/githublight.png" alt="">
+        </a>
+        <a href="https://www.linkedin.com/in/ravi-sinhmar-b66124256/">
+          <img class="w-6 h-6 rounded" src="img/linkedinlight.png" alt="">
+        </a>
+      </div>
+      <div class="h-5 mt-8 border-t rounded"></div>
+  </header>
+
+  
+
+
+
+    <nav class="relative flex items-center flex-wrap gap-2 mb-8">
+      <button id="nav1"  class=" current nav-button text-gray-500 <%= ab %>   text-sm   px-2 py-1 rounded-md relative ">
+        <span class="relative z-10">About</span>
+        <span id="navbg" class=" shadow-md shadow-black   absolute inset-0 z-1 bg-gray-900 rounded-md"></span>
+      </button>
+      <button id="nav2" class="nav-button  text-gray-500 <%= sk %>  text-sm   px-2 py-1 rounded-md relative">
+        <span class="relative z-10">Skills</span>
+      </button>
+      <button id="nav3" class="nav-button text-gray-500  <%= win %> text-sm   px-2 py-1 rounded-md relative">
+        <span class="relative z-10">Winnings</span>
+      </button>
+    
+      <button id="nav4" class="nav-button text-gray-500 <%= hr %>  text-sm   px-2 py-1 rounded-md relative">
+        <span class="relative z-10">Hire</span>
+      </button>
+    </nav>
+
+    <section id="about-section" class="<%= about %>">
+      <div class=" mb-3 bg-gray-100 px-2 py-3 rounded-md shadow-sm hover:-translate-y-1 transition-transform duration-300 ease-in cursor-pointer hover:bg-white border border-gray-200">
+    <h3 class="font-medium text-gray-700 mb-1">Basic Intoduction</h3>
+        <p class="text-sm  text-gray-500">
+      If you are confused in cosidering me then I will only say that <span class="font-semibold">even if I don't know about a specific thing then I will learn it on spot </span>and you will get your work done. So don't loose a <span class="font-semibold">dedicated team mate. </span>I will work like my own work and with  <span class="font-semibold">loyality.</span>
+    </p>
+      </div>
+     
+     <div id="st" class="space-y-10">
+      <div class="">
+        <div class="px-1 py-2 ">
+          <h3 class="text-lg text-gray-700">Experience</h3>
+        </div>
+        <div class="flex">
+          <div id="left" class="top-2 relative  items-center justify-center">
+            <div class="z-10  w-3 h-3 bg-gray-700 rounded-full"></div>
+          <div class="relative left-1 z-0 ms-[1px] h-16 w-0  border "></div>
+          
+        <div class="z-10  w-3 h-3 bg-gray-300 rounded-full"></div>
+        <div class="relative left-1 z-0 ms-[1px] h-8 w-0  border "></div>
+        
+      </div>
+            
+              <div id="right" class="px-6 ">
+               <div class="">
+                <span  class="text-lg text-gray-900">Software Engineer</span>
+                <span class="px-3  py-1 shadow-md  text-sm  border-gray-500    border rounded-full">PRESENT</span>
+                <br>
+                
+              <span class="text-sm text-gray-500">BusSync (Self Employed)</span>
+              
+               </div>
+               <div class="pt-6">
+                <span  class="text-lg text-gray-900">Front-End Engineer</span>
+                <br>
+                
+              <span class="text-sm text-gray-500">Startup DevGuys</span>
+               </div>
+            
+            </div>
+           
+            
+         
+        </div>
+      </div>
+      <div class="">
+        <div class="px-1 py-2 ">
+          <h3 class="text-lg text-gray-700">Projects</h3>
+        </div>
+        <div class="mt-2">
+          <div class=" rounded-md  grid   grid-cols-1  gap-7 pb-8">
+            <div class="md:pr-10 grid-item   p-2 pr-5 rounded-lg :-translate-y-1 transition-transform duration-300 ease-in cursor-pointer hover:bg-white">
+              <div class="relative  w-full flex items-center justify-center pb-10 ">
+               <div class="bg-white  absolute bottom-2 left-1/2 -translate-x-1/2 w-full flex items-center justify-center">
+                Swipe right to See more
+               </div>
+              <div class=" scrollContainer flex px-2  relative gap-4 bg-white  border-2 shadow-sm shadow-black border-gray-100 py-3 overflow-x-scroll flex-row  h-96 rounded-lg w-full">
+                <img class="rounded-md w-full  aspect-[9/10]" src="./img/Project01/1.png" alt="">
+                <div class="h-full min-w-1 bg-gray-400 text-gray-400 text-[1px] rounded-full">i</div>
+                <img class="rounded-md w-full   aspect-[9/10]" src="./img/Project01/2.png" alt="">
+                <div class="h-full min-w-1 bg-gray-400 text-gray-400 text-[1px] rounded-full">i</div>
+
+                <img class="rounded-md w-full   aspect-[9/10]" src="./img/Project01/3.png" alt="">
+                <div class="h-full min-w-1 bg-gray-400 text-gray-400 text-[1px] rounded-full">i</div>
+
+                <img class="rounded-md w-full   aspect-[9/10]" src="./img/Project01/4.png" alt="">
+                <div class="h-full min-w-1 bg-gray-400 text-gray-400 text-[1px] rounded-full">i</div>
+
+                <img class="rounded-md w-full   aspect-[9/10]" src="./img/Project01/5.png" alt="">
+                <div class="h-full min-w-1 bg-gray-400 text-gray-400 text-[1px] rounded-full">i</div>
+
+                <img class="rounded-md w-full   aspect-[9/10]" src="./img/Project01/6.png" alt="">
+                <div class="h-full min-w-1 bg-gray-400 text-gray-400 text-[1px] rounded-full">i</div>
+
+                <img class="rounded-md w-full   aspect-[9/10]" src="./img/Project01/7.png" alt="">
+                <div class="h-full min-w-1 bg-gray-400 text-gray-400 text-[1px] rounded-full">i</div>
+
+                <img class="rounded-md w-full   aspect-[9/10]" src="./img/Project01/8.png" alt="">
+                <div class="h-full min-w-1 bg-gray-400 text-gray-400 text-[1px] rounded-full">i</div>
+
+                <img class="rounded-md w-full   aspect-[9/10]" src="./img/Project01/9.png" alt="">
+                <div class="h-full min-w-1 bg-gray-400 text-gray-400 text-[1px] rounded-full">i</div>
+
+                <img class="rounded-md w-full   aspect-[9/10]" src="./img/Project01/10.png" alt="">
+                <div class="h-full min-w-1 bg-gray-400 text-gray-400 text-[1px] rounded-full">i</div>
+
+                <img class="rounded-md w-full   aspect-[9/10]" src="./img/Project01/11.png" alt="">
+                <div class="h-full min-w-1 bg-gray-400 text-gray-400 text-[1px] rounded-full">i</div>
+
+                <img class="rounded-md w-full   aspect-[9/10]" src="./img/Project01/12.png" alt="">
+                <div class="h-full min-w-1 bg-gray-400 text-gray-400 text-[1px] rounded-full">i</div>
+
+                <img class="rounded-md w-full   aspect-[9/10]" src="./img/Project01/13.png" alt="">
+                <div class="h-full min-w-1 bg-gray-400 text-gray-400 text-[1px] rounded-full">i</div>
+
+                <img class="rounded-md w-full   aspect-[9/10]" src="./img/Project01/14.png" alt="">
+                <div class="h-full min-w-1 bg-gray-400 text-gray-400 text-[1px] rounded-full">i</div>
+
+                <img class="rounded-md w-full   aspect-[9/10]" src="./img/Project01/15.png" alt="">
+                <div class="h-full min-w-1 bg-gray-400 text-gray-400 text-[1px] rounded-full">i</div>
+
+                <img class="rounded-md w-full   aspect-[9/10]" src="./img/Project01/16.png" alt="">
+              </div>
+            </div>
+            
+              
+             <div class="flex flex-col gap-2">
+       <img class="h-12 w-12 mb-3 rounded-md bg-[#4E61E7]" src="./img/Buddy.png" alt="V-Chat">
+              <h3 class=" text-lg  font-bold text-[#4E61E7]">BuddyUp</h3> 
+            <div>
+              <h1 class="font-bold">Features</h1>
+             <span class=" font-semibold text-sm text-gray-700">Application where user can Make Account , Login ,See Profile , Edit Profile , Write Posts ,Delete Post ,Send Requests , Connect with others , Real time Chats , Online/Offline indicator, Block/Unblock, Logout , Delete Account.</span>
+          
+            </div>
+             <div class="bg-gray-200 w-full h-[2px] rounded-full text-gray-100">.</div>
+             <div>
+              <h1 class="font-bold">Tech Used</h1>
+             <p class=" font-semibold text-sm text-gray-700 flex items-center gap-1 mt-0.5"> <span class="font-semibold text-sm  text-[#4E61E7]">Front-End -: </span> Html , Tailwind Css , JavaScript , EJS</p>
+            
+             <p class=" font-semibold text-sm text-gray-700 flex items-center  gap-1 mt-0.5"> <span class="font-semibold text-sm  text-[#4E61E7]">Back-End -: </span>Node.js , Express.js , Raw Websockets , MongoDb (Database)</p>
+             
+          
+            </div>
+             </div>
+       <div class="flex gap-2">
+        <a class="" href="https://msg-io.onrender.com">
+          <div class="mt-2  font-semibold bg-[#4E61E7] text-white px-4 py-1 text-xs rounded-full border   shadow-md  hover:bg-gray-900 hover:shadow-black  hover:translate-x-1 hover:text-white duration-700 transition-all ease-in-out w-fit" >GO LIVE</div>
+         </a>
+         <a class="" href="https://github.com/Ravi-Sinhmar/BuddyUp">
+          <div class="mt-2  font-semibold bg-[#4E61E7] text-white px-4 py-1 text-xs rounded-full border   shadow-md  hover:bg-gray-900 hover:shadow-black  hover:translate-x-1 hover:text-white duration-700 transition-all ease-in-out w-fit" >SEE CODE</div>
+
+         </a>
+      
+            </div>
+
+           </div>
+
+      
+          </div>
+          
+        </div>
+      </div>
+       
+     
+    </div>
+
+      
+
+    </section>
+      
+      <section id="skills-section" class=" space-y-6 <%= skills %> ">
+        <div class=" mb-3 bg-gray-100 px-2 py-3 rounded-md shadow-sm hover:-translate-y-1 transition-transform duration-300 ease-in cursor-pointer hover:bg-white border border-gray-200">
+          <h3 class="font-medium text-gray-700 mb-1">Overall View</h3>
+              <p class="text-sm  text-gray-500">
+            I am a <span class="font-semibold">Front-End and Back-End software developer.</span> I have good command in developing any software <span class="font-semibold">Website or App </span>from scrach. <span class="font-semibold"> I am able to read Documentation and add that feature</span>
+          </p>
+            </div>
+        <div id="Experience" class="bg-white ring-1 ring-black  rounded-lg px-4 py-4">
+          <div class="bg-black text-white font-semibold  text-sm shadow-gray-400 shadow-md border-2 w-fit mb-4 rounded-full px-3 py-1  border-black hover:translate-x-3 transition-transform duration-500 ease-out">
+            Experienced In
+            </div>
+      
+      <div class="  rounded-md  flex justify-stretch flex-wrap gap-2 px-3 w-fit">
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/html.png" alt="">
+      <span class="font-semibold text-xs">Html</span>
+        </div>
+        
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/css.png" alt="">
+      <span class="font-semibold text-xs">Css</span>
+        </div>
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/tailwind.png" alt="">
+      <span class="font-semibold text-xs">Tailwind</span>
+        </div>
+        
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/bootstrap.png" alt="">
+      <span class="font-semibold text-xs">Bootstrap</span>
+        </div>
+        
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/javascript.png" alt="">
+      <span class="font-semibold text-xs">JavaScript</span>
+        </div>
+        
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/typescript.png" alt="">
+      <span class="font-semibold text-xs">Typescript</span>
+        </div>
+        
+       </div>
+      
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/React.png" alt="">
+      <span class="font-semibold text-xs">React.js</span>
+        </div>
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/node.js.png" alt="">
+      <span class="font-semibold text-xs">Node.js</span>
+        </div>
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/express.png" alt="">
+      <span class="font-semibold text-xs">Express.js</span>
+        </div>
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/websockets.png" alt="">
+      <span class="font-semibold text-xs">Web Sockets</span>
+        </div>
+       </div>
+      
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/cpp.png" alt="">
+      <span class="font-semibold text-xs">C++</span>
+        </div>
+       </div>
+        
+      
+      </div>
+        </div>
+        <div id="Currently" class="bg-white ring-1 ring-black   rounded-lg px-4 py-4">
+          <div class="bg-black text-white font-semibold  text-sm shadow-gray-400 shadow-md border-2 w-fit mb-4 rounded-full px-3 py-1  border-black hover:translate-x-3 transition-transform duration-500 ease-out">
+           Currently Learning
+            </div>
+      
+      <div class="  rounded-md  flex justify-stretch flex-wrap gap-2 px-3 w-fit">
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/nextjs.png" alt="">
+      <span class="font-semibold text-xs">Next.js</span>
+        </div>
+        
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/react-native2.png" alt="">
+      <span class="font-semibold text-xs">React-Native (App Development)</span>
+        </div>
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/dsa.png" alt="">
+      <span class="font-semibold text-xs">DSA</span>
+        </div>
+       </div>
+      </div>
+        </div>
+  
+        <div id="Currently" class="bg-white ring-1 ring-black   rounded-lg px-4 py-4">
+          <div class="bg-black text-white font-semibold  text-sm shadow-gray-400 shadow-md border-2 w-fit mb-4 rounded-full px-3 py-1  border-black hover:translate-x-3 transition-transform duration-500 ease-out">
+          Tools I know
+            </div>
+      <div class="  rounded-md  flex justify-stretch flex-wrap gap-2 px-3 w-fit">
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/git.png" alt="">
+      <span class="font-semibold text-xs">Git</span>
+        </div>
+        
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/github.png" alt="">
+      <span class="font-semibold text-xs">Github</span>
+        </div>
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/notion.png" alt="">
+      <span class="font-semibold text-xs">Notion (For taking Notes)</span>
+        </div>
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/vscode.png" alt="">
+      <span class="font-semibold text-xs">Vs Code</span>
+        </div>
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/figma.png" alt="">
+      <span class="font-semibold text-xs">Figma</span>
+        </div>
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/vercel.png" alt="">
+      <span class="font-semibold text-xs">Vercel</span>
+        </div>
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+          <img class="w-4 h-4" src="./img/render.png" alt="">
+      <span class="font-semibold text-xs">Render</span>
+        </div>
+       </div>
+      </div>
+        </div>
+  
+  
+  
+        <div id="soft" class="bg-white ring-1 ring-black  rounded-lg px-4 py-4">
+          <div class="bg-black text-white font-semibold  text-sm shadow-gray-400 shadow-md border-2 w-fit mb-4 rounded-full px-3 py-1  border-black hover:translate-x-3 transition-transform duration-500 ease-out">
+          Soft Skills
+            </div>
+      
+      <div class="  rounded-md  flex justify-stretch flex-wrap gap-2 px-3 w-fit">
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+      <span class="font-semibold text-xs">Porblem finder & solver</span>
+        </div>
+        
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+      <span class="font-semibold text-xs">Team Handling</span>
+        </div>
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+      <span class="font-semibold text-xs">Quick Learner</span>
+        </div>
+       </div>
+       <div class="w-fit h-fit group py-2 flex justify-between gap-4 ">
+        <div class=" group-hover:-translate-y-5 group-hover:bg-orange-500 gap-1 text-black border-2 border-black bg-white rounded-full shadow-xl px-2 py-1 flex  items-center  transition-all duration-300 ease-in-out  ">
+      <span class="font-semibold text-xs">Social & Management Skills</span>
+        </div>
+       </div>
+      </div>
+        </div>
+      </section>
+
+      <section id="winnings-section" class=" text-gray-600  <%= winnings %>">
+
+        <div class=" mb-3 bg-gray-100 px-2 py-3 rounded-md shadow-sm hover:-translate-y-1 transition-transform duration-300 ease-in cursor-pointer hover:bg-white border border-gray-200">
+          <h3 class="font-medium text-gray-700 mb-1">Special Attention</h3>
+              <p class="text-sm  text-gray-500">
+            I have participated in <span class="font-semibold"> 2 National Level Hackathons</span>  and  <span  class="font-semibold">1 University Level Ideathon. </span>Along with that I have a ability <span class="font-semibold">To solve Real World Porblems.</span>
+          </p>
+            </div>
+<div class=" grid grid-cols-1 mt-5 gap-4 lg:grid-cols-2 ">
+  <!-- item 1 -->
+  <div class=" grid-cols-1 ring-1 ring-gray-300 rounded-md  ">
+    <div class="px-1 py-1 ">
+    <img class="rounded-md" width="100%" src="./img/ChandigarhHackathon.png" alt="">
+
+    </div>
+    <div class="px-1 relative">
+
+     <a href="https://drive.google.com/file/d/1cUaE7KA2AR_rJBQtOocFpdHH5ZC37o55/view" class=" shadow-md shadow-black  transition-transform duration-300 hover:translate-x-1 ease-in-out flex gap-1 absolute  right-2 top-1 text-xs font-semibold px-2 py-1 text-black ring-1 ring-black rounded-full">View Certificate <span><img class="w-4 h-4" src="./img/view.png" alt=""></span></a>
+      <p class="text-lg font-semibold">Idea Manthan</p> 
+      <p  class="text-md  text-gray-700">Chandigarh Groups of Colleges</p>
+      <h4  class="text-md  text-gray-700">Landran, Punjab</h4>
+    </div>
+    <div class="bg-gray-200 px-2 py-2 ">
+      <p>In this event we build a Hardware Device with Fingprint Sensor , Real time Location by single press on women safety. Around 50 teams were there and total 3 teams get the Incubation and Prizes. We got 3rd position with <span class="font-semibold text-black text-md">Rs: 20,000/</span> prize money.</p>
+ 
+    </div>
+  </div>
+  <!-- item 2 -->
+  <div class=" grid-cols-1 ring-1 ring-gray-300 rounded-md  ">
+    <div class="px-1 py-1 ">
+    <img class="rounded-md" width="100%" src="./img/VitHackathon.png" alt="">
+
+    </div>
+    <div class="px-1 relative  ">
+     <a href="https://drive.google.com/file/d/11vm8UFfnoWqmyt1uR0c82_ZZH0AVp3gc/view?usp=sharing" class=" shadow-md shadow-black  transition-transform duration-300 hover:translate-x-1 ease-in-out flex gap-1 absolute  right-2 top-1 text-xs font-semibold px-2 py-1 text-black ring-1 ring-black rounded-full">View Certificate <span><img class="w-4 h-4" src="./img/view.png" alt=""></span></a>
+
+      <p class="text-lg font-semibold">Annual Business Plan</p>
+      <p  class="text-md  text-gray-700">VIT-AP University</p>
+      <h4  class="text-md  text-gray-700">Amaravati, Andhra Pardesh</h4>
+    </div>
+    <div class="bg-gray-200 px-2 py-2 ">
+      <p>This was an Online Competiton , we present our Startup Idea , Roadmap, Finance handling and Execution Plans. Out of 67 teams top 5 got selected and we secure 3rd positon with a prize money of <span class="font-semibold text-black text-md">Rs: 25,000/</span> </p>
+   
+    </div>
+  </div>
+  
+  <!-- item 3 -->
+  <div class=" grid-cols-1 ring-1 ring-gray-300 rounded-md  ">
+    <div class="px-1 py-1 ">
+    <img class="rounded-md ring-1 ring-gray-200" width="100%" src="./img/Talash.png" alt="">
+
+    </div>
+    <div class="px-1 relative  ">
+     <a href="https://www.instagram.com/p/CZHTYFtBeWV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class=" shadow-md shadow-black transition-transform duration-300 hover:translate-x-1 ease-in-out flex gap-1 absolute  right-2 top-1 text-xs font-semibold px-2 py-1 text-black ring-1 ring-black rounded-full">View Post<span><img class="w-4 h-4" src="./img/view.png" alt=""></span></a>
+
+      <p class="text-lg font-semibold">Talash</p>
+      <p  class="text-md  text-gray-700">Guru Jambheswar University</p>
+      <h4  class="text-md  text-gray-700">Hisar, Haryana</h4>
+    </div>
+    <div class="bg-gray-200 px-2 py-2 ">
+      <p>Our university conduct an event to get startup Idea from student so I present my idea and got <span class="font-semibold text-black text-md">1st Positon</span></p>
+    </div>
+  </div>
+</div>
+       
+       
+       </section>
+       <section id="hire-section" class="<%= hire %>">
+        <div class=" mb-3 bg-gray-100 px-2 py-3 rounded-md shadow-sm hover:-translate-y-1 transition-transform duration-300 ease-in cursor-pointer hover:bg-white border border-gray-200">
+          <h3 class="font-medium text-gray-700 mb-1">My Prefrence</h3>
+              <p class="text-sm  text-gray-500">
+           I am more inclided towards working with <span class="font-semibold">Startups</span> .So if you are a early stage startup then I will be glad to work with you. I will work as a freelance or full time both way (Can Discuss).
+          </p>
+            </div>
+            <div  class=" bg-white ring-1 ring-black py-3 rounded-md xl:px-6">
+              
+              <div class="container px-4 space-y-5 ">
+                <h2 class="text-xl font-bold text-center mb-8">Let's Work Together</h2>
+           
+                <form id="hire-me-form" class="flex flex-wrap -mx-4 font-normal " action="/" method="POST">
+                  <div class="w-full  px-4 mb-4">
+                    <label for="name" class="text-gray-700 text-sm block mb-2">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Company Name / Your Name" required class="w-full text-sm px-2 py-1.5 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-black">
+                  </div>
+                  <div class="w-full  px-4 mb-4">
+                    <label for="email" class="text-gray-700 text-sm block mb-2">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Company/Personal Email" required class="w-full text-sm px-2 py-1.5 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-black">
+                  </div>
+                  <div class="w-full  px-4 mb-4">
+                    <label for="role" class="text-gray-700 text-sm block mb-2">My Role</label>
+                    <input type="text" id="role" name="role" placeholder="Position/Role you hiring for" class="w-full text-sm px-2 py-1.5 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-black">
+                  </div>
+                  <div class="w-full  px-4 mb-4">
+                    <label for="jobDescription" class="text-gray-700 text-sm block mb-2">Job Description</label>
+                    <textarea rows="4"   id="jobDescription" name="jobDescription" placeholder="Suppose it is email box.. Write whatever you want" required class=" w-full text-sm px-2 py-1.5 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-black"></textarea>
+                  </div>
+                  <div class="w-full px-4 mb-4">
+                    <label for="link" class="text-gray-700 text-sm block mb-2">Website Link (If not, Leave)</label>
+                    <input type="url" id="link" name="link" placeholder="Paste Link" class="w-full text-sm px-2 py-1.5 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-black">
+                  </div>
+                  <div class="w-full px-4 mb-4 flex items-center justify-end ">
+                    <button type="submit" class="text-white bg-black  focus:ring-4 focus:outline-none shadow-md shadow-black font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 ">Submit</button>
+                  </div> 
+      </form>
+      </div>
+      </div>
+       </section>
+       
+
+
+<footer class="flex flex-col items-center mt-10 border-t py-12">
+  <img class="w-16 h-18" src="./img/peace.svg" alt="">
+  <span class="text-black text-sm ">© 2024 - Ravi Sinhmar</span>
+</footer>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>

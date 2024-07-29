@@ -1,0 +1,55 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="output.css">
+  <title>Home Page</title>
+  <style>
+:root {
+      --travel-width: 198px;
+      --item-width: 42px;
+    } 
+    #navbg {
+    width: var(--item-width);
+    left: var(--travel-width);
+     transition-property:all;
+     transition-duration: 0.4s;
+     transition-timing-function: ease;
+     transition-delay: 0;
+    }
+    .active{
+      color: white;
+    }
+    #navbg.active{
+      width: var(--item-width);
+     left: var(--travel-width);
+    }
+  
+  </style>
+</head>
+<body>
+  <main class="min-h-full max-w-full ">
+        <div class=" flex flex-col  sm:flex-row-reverse justify-center items-center  h-screen sm:gap-20 ">
+          <img src="./img/404error.png" alt="404 Error" class="w-72 sm:w-80  mb-10">
+
+          <div class="space-y-6 ">
+            <h1 class="text-2xl sm:text-6xl">OOOPS...</h1>
+            <h3>Looks like this page doesn't exist, <br> but don't let that stop you.</h3>
+            <a href="/">
+              <button class="border-2 border-black mt-3 font-bold px-6 py-3 hover:bg-black hover:text-white text-xs">GO HOME</button>
+
+            </a>
+          </div>
+        </div>
+ 
+     
+
+  </main>
+  
+</body>
+</html>
+  
